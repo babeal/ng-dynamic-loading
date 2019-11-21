@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "incremental": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "esNext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "module-react": [
+        "dist/module-react"
+      ],
+      "module-react/*": [
+        "dist/module-react/*"
+      ],
+      "module-vue": [
+        "dist/module-vue"
+      ],
+      "module-vue/*": [
+        "dist/module-vue/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableIvy": true
+  }
+}
