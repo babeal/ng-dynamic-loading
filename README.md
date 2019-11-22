@@ -1,7 +1,16 @@
 # Angular dynamic module loading
 ## Angular Code Splitting & Hot Module Injection
 
-- forked from https://github.com/raphael22/whatsnext-angular
+## TODO
+
+- [x] extend the react example to mount a react component and turn rendering over to that engine
+- [ ] compile modules using ivy exposing the component factory and load with import()
+- [ ] break the angular example into to two parts, one using the parent angular deps, the second providing the entire stack
+
+## Links
+
+- https://github.com/raphael22/whatsnext-angular
+- https://blog.angularindepth.com/asynchronous-modules-and-components-in-angular-ivy-1c1d79d45bd3
 
 ### Requirements
 - node >= 10
@@ -27,3 +36,6 @@
 ### Misc
 
 - execute ```npm run pre-rollup``` if you made change in /scripts/rollup.ts
+
+
+
