@@ -1,5 +1,5 @@
 /*
- * Public API Surface of module-react
+ * Public API Surface of module-angular
  */
 // export * from './lib/module-angular.routing'
 export * from './lib/module-angular.component';

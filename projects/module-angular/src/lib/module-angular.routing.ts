@@ -5,15 +5,14 @@ import { ModuleAngularComponent } from "./module-angular.component";
 
 const routes: Route[] = [
     {
-        path: '',
-        component: ModuleAngularComponent
-    }
+        path: "",
+        component: ModuleAngularComponent,
+    },
 ];
 
-
 @NgModule({
-  declarations: [],
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    declarations: [],
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
 })
-export class ModuleAngularRoutingModule { }
+export class ModuleAngularRoutingModule {}

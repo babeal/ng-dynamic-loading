@@ -9,7 +9,7 @@
 
 ## Links
 
-- https://github.com/raphael22/whatsnext-angular
+- https://github.com/raphael22/whatsnext-angular (the original source this code was created from)
 - https://blog.angularindepth.com/asynchronous-modules-and-components-in-angular-ivy-1c1d79d45bd3
 
 ### Requirements
