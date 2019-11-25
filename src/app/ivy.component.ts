@@ -11,17 +11,19 @@ import { IModule, ModulesService } from "./services/modules.service";
 
 declare const SystemJS;
 
+// had used ng-container before rc.3 but now ng-container throws an exception that the node can't be appended
+// even though it actually is. so swapped to div
 @Component({
     selector: "app-ivy",
     template: `
-        <ng-container #root></ng-container>
+        <div #root></div>
     `,
     styles: [``],
 })
 export class IvyComponent implements AfterViewInit {
     @Input() zone: any;
 
-    @ViewChild("root", { read: ViewContainerRef, static: true })
+    @ViewChild("root", { read: ViewContainerRef })
     root: ViewContainerRef;
 
     constructor(
@@ -42,12 +44,16 @@ export class IvyComponent implements AfterViewInit {
             SystemJS.import(
                 "assets/modules/module-angular/module-angular.js"
             ).then(ModuleAngular => {
+
                 const injector = createInjector(
                     ModuleAngular.default,
                     this.injector
                 );
                 const module = injector.get(ModuleAngular.default);
-                module.render(this.root);
+                const componentRef = module.render(this.root);
+                componentRef.instance.name = "MYNAME";
+                componentRef.changeDetectorRef.markForCheck();
+
             });
         } catch (error) {
             console.error(

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 
-import { HelloWorld } from "./component";
+import { HelloWorld } from "./react-component";
 
 @Component({
     selector: "lib-module-react",

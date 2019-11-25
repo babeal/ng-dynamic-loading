@@ -4,13 +4,15 @@ import { Component, OnInit } from "@angular/core";
     selector: "lib-module-angular",
     template: `
         <p>
-            module-angular
+            module-angular {{ name }}
         </p>
     `,
     styles: [],
 })
 export class ModuleAngularComponent implements OnInit {
     constructor() {}
+
+    public name: string = "BEFORE";
 
     ngOnInit() {}
 }

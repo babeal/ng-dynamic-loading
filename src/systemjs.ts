@@ -7,6 +7,7 @@ import * as AngularCommon from "@angular/common";
 import * as AngularCore from "@angular/core";
 import * as AngularRouter from "@angular/router";
 
+// not sure if this is needed.
 SystemJS.set("tslib", SystemJS.newModule(TsLib));
 
 SystemJS.set("@angular/core", SystemJS.newModule(AngularCore));
