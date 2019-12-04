@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
+import { ExampleService } from "./example.service";
+
 @Component({
     selector: "lib-module-angular",
     template: `
@@ -10,9 +12,11 @@ import { Component, OnInit } from "@angular/core";
     styles: [],
 })
 export class ModuleAngularComponent implements OnInit {
-    constructor() {}
+    constructor(private exampleService: ExampleService) {}
 
-    public name: string = "BEFORE";
+    public name: string = "INITIAL";
 
-    ngOnInit() {}
+    ngOnInit() {
+      this.name = this.exampleService.getValue();
+    }
 }

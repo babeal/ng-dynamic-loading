@@ -4,14 +4,14 @@ import {
     ViewContainerRef
 } from "@angular/core";
 
+import { ExampleService } from "./example.service";
 import { ModuleAngularComponent } from "./module-angular.component";
 import { ModuleAngularRoutingModule } from "./module-angular.routing";
 
 @NgModule({
     declarations: [ModuleAngularComponent],
+    // providers: [ExampleService]
     // imports: [ModuleAngularRoutingModule],
-    // exports: [ModuleAngularComponent],
-    // entryComponents: [ModuleAngularComponent]
 })
 export class ModuleAngularModule {
     constructor(

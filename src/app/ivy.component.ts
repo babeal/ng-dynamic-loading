@@ -51,8 +51,10 @@ export class IvyComponent implements AfterViewInit {
                 );
                 const module = injector.get(ModuleAngular.default);
                 const componentRef = module.render(this.root);
-                componentRef.instance.name = "MYNAME";
-                componentRef.changeDetectorRef.markForCheck();
+
+                // You can set the property directly on the component instance, however, the change detector must be called.
+                // componentRef.instance.name = "MYNAME";
+                // componentRef.changeDetectorRef.markForCheck();
 
             });
         } catch (error) {
